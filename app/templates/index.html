@@ -1,0 +1,199 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+
+	<center>
+	<form id="fm" action="/submit" id="textform" method="POST">
+		<div id="box" >
+	    <input id="tex" type="number" min="0" step="1" name="amount" placeholder="   Enter Amount Here..."  required="required">
+	    <br>
+		<h1>{{senderHash}}</h1>
+		<input id="hww" type="passwd" name="reciver" placeholder="   Receiver ID..."  required="required">
+	    <div id="but-box"><input class="bot" type="submit" value="POST"></div>
+	    </div>
+	</form>
+	</center>
+
+	<div id="mine">
+		<div id="reqq"><a href="{{node_address}}/mine" target="_blank"><button class="bot" style="margin-top: 0;">REQUEST TO MINE</button></a></div>
+		<div id="resync"><a href="/"><button class="bot" style="margin-top: 0;">RESYNC</button></a></div>
+	</div>
+	<div style="margin: 20px;">
+		<br><br>
+    {% for post in posts %}
+    <div class="post_box">
+		<div class="post_box-header">
+			<div class="name-header">Sender : <span class="con">{{post.senderHash}}</span></div>
+			<div class="post_box-subtitle"> Amount transfered : <span class="con">{{post.amount}}  credits</span></div>
+		 </div>
+	   <div>
+	      <div class="post_boqx-body">
+	         <p id="post-bb">Receiver : <span class="con">{{post.reciver}}</span></p>
+	      </div>
+	   </div>
+	</div>
+	{% endfor %}
+
+	<style>
+		.con{
+			text-decoration: underline;
+			font-weight: 700;
+		}
+		.name-header{
+			margin-bottom: 10px;
+		}
+		#post-bb{
+			margin-top: 10px;
+		}
+		#but-box{
+			margin-top: 3%;	
+		}
+		#reqq{
+			float: left;
+			margin-left: 10%;
+				
+		}
+		#resync{
+			float: right;
+			margin-right: 10%;
+		}
+		#mine{
+			margin : auto auto;
+			width: 100%;
+			height: 50px;
+			padding: 20px;
+		}
+		#box{
+			height: auto;
+		}
+		#fm{
+			height: auto;
+			padding: 20px;
+		}
+		#now{
+			margin: 2px auto;
+			width: 100%;
+		}
+		#tex{
+			padding: 20px;
+			font-size: 20px;
+			border-radius: 10px;
+			height: 10%;
+			width: 80%;
+			border: 5px solid rgba(100,0,0,0.5);
+			box-shadow: -5px 5px rgba(50,0,0,0.25);
+			display: inline-block;
+		}
+		.bot{
+			border: 2px solid gold;
+			padding: 10px 40px;
+			margin-top: 10px;
+			font-size: 15px;
+			border-radius: 15px;
+			box-shadow: 0 5px rgba(0,0,0,0.5);
+			outline: none;
+		}
+		#hww{
+			border-radius: 10px;
+			height: 5%;
+			width: 50%;
+			float: left;
+			margin-top: 10px;
+			margin-left: 15%;
+			border: 5px solid rgba(100,0,0,0.5);
+			box-shadow: -5px 5px rgba(50,0,0,0.25);
+		}
+		#lil{
+			text-transform: uppercase;
+			font-family: 'Gaegu', cursive;
+			font-size: 4em;
+			margin: 5px;	
+			color:blueviolet;
+			text-shadow: 3px 3px blue;
+		}
+		#home{
+			font-size: 30px;
+			padding : 2% 2%;
+			margin: 1%;
+			background-color :  rgba(255,255,255,0.75);
+			border-radius: 5px;
+			color: rgb(50,50,50);
+			font-weight: 800;
+		}
+		a{
+			text-decoration: none;
+		}
+		hr{
+			height: 5px;
+			width: 90%;
+			margin: 10px auto;
+			border: 0;
+			height: 3px;
+			color : rebeccapurple;
+    		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+		}
+		.post_box {
+		    background: rgba(255,255,255,0.35);
+		    padding: 10px ;
+		    margin-top: 0px;
+		    margin-bottom: 15px;
+			border-radius: 8px;
+		    border: 1px solid #f0f0f0;
+		}
+
+		.post_box-header {
+		    padding-bottom: 0;
+		}
+
+		.post_box-avatar {
+		    width: 38px;
+		    height: 38px;
+		    border-radius: 50%;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    color: white;
+		    font-size: 22px;
+		    float: left;
+		    margin-right: 16px;
+		    border: 1px solid #fff;
+		    box-shadow: 0px 0px 0px 2px #f00;
+		}
+
+		.post_box-avatar::after {
+		    content:"";
+		    display:block;
+		}
+
+		.post_box-name {
+		    font-weight: bold;
+
+		}
+
+		.post_box-subtitle {
+		    color: rgba(0,0,0,0.75);
+		}
+
+		.post_box-body {
+		}
+
+		.post_box-options {
+		    float: right;
+		}
+		.option-btn {
+		    background: #f8f8f8;
+		    border: none;
+		    color: #2c3e50;
+		    padding: 7px;
+		    cursor: pointer;
+		    font-size: 14px;
+		    margin-left: 2px;
+		    margin-right: 2px;
+		    outline: none;
+		    height: 42px;
+		}
+	</style>
+    </div>
+{% endblock %}

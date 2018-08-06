@@ -1,0 +1,125 @@
+body{
+	background: linear-gradient(to right, #98a2ff, #505090);
+	width: 100%;
+	height: 100;
+	margin: 0;
+	padding: 1;
+}
+.navbar{
+	height: auto;
+	width: 100%;
+	background: linear-gradient(to right, #ffe498, #aa9955);  /* fallback for old browsers */
+	font-family: 'Roboto Slab';
+	font-weight: 900;
+	font-size: 1.75vw;
+	letter-spacing: 2px;
+	overflow: hidden;
+}
+.navbar a{
+	text-decoration: none;
+	color: #7082c0;
+}
+.right{
+	box-shadow: 2px 2px rgba(255,0,0,0.5);
+	padding: 1.5%;
+	float: left;
+	margin :1%;
+	margin-left: 5%;
+	border: 1.5px solid rgba(255,0,0,0.25);
+	border-radius: 5px;
+}
+.left{
+	box-shadow: 2px 2px rgba(255,0,0,0.5);
+	padding: 1.5%;
+	float: right;
+	margin : 1%;
+	margin-right: 2.5%;
+	border: 1.5px solid rgba(255,0,0,0.25);
+	border-radius: 5px;
+}
+.register{
+	border: 3px solid rgba(255,0,0,0.25);
+	border-radius: 50px;
+	box-shadow: 5px 5px rgba(255,255,255,0.2);
+	max-width: 75%;
+	margin: 5% auto;
+	margin-bottom: 1%;
+	background: #5870a0;
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
+	color: #dddddd;
+	margin-top: 2.5%;
+
+}
+.lab{
+	width: 100%;
+	text-align: center;
+	font-size: 2.5vw;
+
+}
+.name{
+	width: 100%;
+	margin-left: 5%;
+	font-size: 2.0vw;
+	
+
+}
+.namefield{
+	max-width: 75%;
+	margin: 1% auto;
+}
+input{
+	width: 100%;
+	border: 3px solid white; 
+	box-shadow: inset 0 0 8px  rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1); 
+	padding: 1%;
+	background: rgba(255,228,152,0.7);
+    margin: 0 0 10px 0;
+    font-size: 2.0vw;
+    color: rgba(0,0,190,0.8);
+    word-wrap: break-word;
+    text-align: center;
+}
+.btncenter{
+	max-width: 80%;
+	margin: 1% auto;
+	margin-bottom: 3%;
+	display: flex;
+	flex: flex-wrap;
+}
+.butt{
+	font-size: 2.2vw;
+	width: 45%; 
+	text-align: center;
+	text-decoration: none;
+	background: #eb94d0;
+	 box-shadow: 6px 5px 24px #666666;
+	 border-radius: 25px;
+	 font-family: 'Wendy One';
+	 font-weight: 100;
+	 color: #739bd4	;
+	 outline: none;
+	 padding: 2%;
+}
+#gen{
+	float: left;
+	margin-right: 5%;
+	border-collapse: collapse;
+
+}
+#req{
+	margin-left: 5%;
+	float: right;
+	border-collapse: collapse;
+}
+#lel{
+	margin: 0 auto;
+}
+.hidden{	
+	display: none;
+}
+.last{
+	width: 100%;
+	text-align: center;
+	margin : 0 auto;
+}

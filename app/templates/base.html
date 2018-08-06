@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+  </head>
+  <body style="margin: 10px; padding: 5%; background: linear-gradient(to right, #11998e, #38ef7d ); min-width: 500px; ">
+    <div style="display: inline; width: auto;"><a id="home" href="/">Home</a></div>
+    <br><br><br><br>
+    <hr>
+    <center><h1 id=lil>{{ title }}</h1></center>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>
